@@ -3,7 +3,7 @@ import importlib
 import random
 
 
-# The names of the .py files you want to test (without the .py"
+# The names of the .py files you want to test (without the .py)
 files = ["shuffle", "sort"]
 
 # The input sizes you want to test

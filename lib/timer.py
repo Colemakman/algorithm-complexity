@@ -3,7 +3,10 @@ import importlib
 import random
 
 
+# The names of the .py files you want to test (without the .py"
 files = ["shuffle", "sort"]
+
+# The input sizes you want to test
 inputs = [1, 10, 100, 1000, 10000]
 
 def time_algorithm(algorithm, size):

@@ -3,11 +3,14 @@ import importlib
 import random
 
 
+# Basically higher number = higher degree of accuracy but tests take longer.
+NUMBER = 3 
+
 # The names of the .py files you want to test (without the .py"
-files = ["shuffle", "sort"]
+files = ["sub_sequence_sum_inefficient", "sub_sequence_sum_efficient"]
 
 # The input sizes you want to test
-inputs = [1, 10, 100, 1000, 10000]
+inputs = list(range(5000, 100001, 5000))
 
 def time_algorithm(algorithm, size):
     setup = f'from {algorithm} import {algorithm};'
@@ -16,8 +19,8 @@ def time_algorithm(algorithm, size):
     random.shuffle(test_input)
     test = f'{algorithm}({test_input})'
     
-    time_taken = timeit.timeit(test, setup=setup, number=1000)
-    return time_taken
+    time_taken = timeit.timeit(test, setup=setup, number=NUMBER)
+    return time_taken / NUMBER
 
 for alg in files:
     for size in inputs:

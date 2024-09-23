@@ -3,11 +3,16 @@ import importlib
 import random
 
 
+<<<<<<< HEAD
 # Basically higher number = higher degree of accuracy but tests take longer.
 NUMBER = 3 
 
 # The names of the .py files you want to test (without the .py"
 files = ["sub_sequence_sum_inefficient", "sub_sequence_sum_efficient"]
+=======
+# The names of the .py files you want to test (without the .py)
+files = ["shuffle", "sort"]
+>>>>>>> 106b83df730b3f9aca38ba31cc8b4b58d1eea52b
 
 # The input sizes you want to test
 inputs = list(range(5000, 100001, 5000))
